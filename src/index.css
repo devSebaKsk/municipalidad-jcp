@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f3f4f6;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-dark {
+  background: rgba(11, 67, 105, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-container {
+  position: relative;
+  overflow: hidden;
+  background: #0b4369;
+}
+
+.service-card {
+  transition: transform 0.3s ease;
+}
+
+.login-input {
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 67, 105, 0.1);
+}

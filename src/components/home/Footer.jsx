@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -9,8 +10,8 @@ function Footer() {
           <p>Intendencia Mario Ishii. Gestión y Transparencia.</p>
         </div>
         <div className="flex space-x-6">
-          <a href="#" className="hover:text-jcp transition-colors">Privacidad</a>
-          <a href="#" className="hover:text-jcp transition-colors">Contacto</a>
+          <Link to="/" className="hover:text-jcp transition-colors">Privacidad</Link>
+          <Link to="/" className="hover:text-jcp transition-colors">Contacto</Link>
         </div>
       </div>
     </footer>

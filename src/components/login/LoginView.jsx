@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginView() {
   return (
@@ -65,9 +66,9 @@ function LoginView() {
             <label className="flex items-center text-gray-500 cursor-pointer">
               <input type="checkbox" className="mr-2 rounded text-jcp focus:ring-jcp border-gray-300" /> Recordarme
             </label>
-            <a href="#" className="text-jcp font-bold hover:underline">
+            <Link to="/" className="text-jcp font-bold hover:underline">
               ¿Olvidaste tu clave?
-            </a>
+            </Link>
           </div>
 
           <button type="submit" className="w-full bg-jcp text-white py-4 rounded-xl font-bold shadow-lg shadow-jcp/30 hover:bg-jcp-dark transform hover:-translate-y-0.5 transition-all mt-4">

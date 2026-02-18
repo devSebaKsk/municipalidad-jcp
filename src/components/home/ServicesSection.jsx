@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ServicesSection() {
   return (
@@ -8,14 +9,14 @@ function ServicesSection() {
           <span className="text-jcp font-bold tracking-wider uppercase text-sm mb-2 block">Trámites Online</span>
           <h2 className="text-4xl font-bold text-gray-900">¿Qué necesitás hacer hoy?</h2>
         </div>
-        <a href="#" className="hidden md:flex items-center text-jcp font-bold hover:text-jcp-light transition-colors mt-4 md:mt-0 group">
+        <Link to="/" className="hidden md:flex items-center text-jcp font-bold hover:text-jcp-light transition-colors mt-4 md:mt-0 group">
           Ver todos los trámites
           <span className="bg-jcp text-white rounded-full p-1 ml-2 group-hover:translate-x-1 transition-transform">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
             </svg>
           </span>
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginEmpleadosView() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate('/verificacion');
+  };
+
   return (
-    <div id="login-empleados-view" className="hidden min-h-screen pt-20 flex items-center justify-center relative z-40 bg-gray-50/50 backdrop-blur-sm">
+    <div id="login-empleados-view" className="min-h-screen pt-20 flex items-center justify-center relative z-40 bg-gray-50/50 backdrop-blur-sm">
       <div
-        className="max-w-md w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100 relative z-10 mx-4 opacity-0 transform translate-y-4"
+        className="max-w-md w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100 relative z-10 mx-4"
         id="login-empleados-card"
       >
         <div className="text-center mb-8">
@@ -18,7 +25,28 @@ function LoginEmpleadosView() {
           <p className="text-gray-500 text-sm">Acceso exclusivo para personal municipal.</p>
         </div>
 
-        <form id="login-empleados-form" className="space-y-5" onSubmit={(event) => event.preventDefault()}>
+        <form id="login-empleados-form" className="space-y-5" onSubmit={handleSubmit}>
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-2 ml-1">Legajo</label>
+            <div className="relative">
+              <span className="absolute left-4 top-3.5 text-gray-400">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+              </span>
+              <input
+                type="text"
+                className="login-input w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-jcp focus:border-transparent outline-none text-gray-700 font-medium placeholder-gray-400"
+                placeholder="Ej: LG-2024-001"
+                required
+              />
+            </div>
+          </div>
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-2 ml-1">DNI</label>
             <div className="relative">

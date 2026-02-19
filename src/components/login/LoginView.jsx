@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginView() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate('/verificacion');
+  };
+
   return (
-    <div id="login-view" className="hidden min-h-screen pt-20 flex items-center justify-center relative z-40 bg-gray-50/50 backdrop-blur-sm">
+    <div id="login-view" className="min-h-screen pt-20 flex items-center justify-center relative z-40 bg-gray-50/50 backdrop-blur-sm">
       <div
-        className="max-w-md w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100 relative z-10 mx-4 opacity-0 transform translate-y-4"
+        className="max-w-md w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 border border-gray-100 relative z-10 mx-4"
         id="login-card"
       >
         <div className="text-center mb-8">
@@ -18,7 +25,7 @@ function LoginView() {
           <p className="text-gray-500 text-sm">Gestioná tus trámites de forma segura.</p>
         </div>
 
-        <form id="login-form" className="space-y-5" onSubmit={(event) => event.preventDefault()}>
+        <form id="login-form" className="space-y-5" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-2 ml-1">DNI</label>
             <div className="relative">
